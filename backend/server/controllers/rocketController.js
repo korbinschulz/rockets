@@ -5,11 +5,19 @@ const Rocket = require("../models/rocketModel");
 // @route   Post /api/rockets
 // @access  Public
 const addRocket = asyncHandler(async (req, res) => {
-  const { name, year, passengers, about } = req.body;
+  const { name, year, passengers, about, img } = req.body;
 
-  if (!name || !year || !passengers || !about) {
+  if (!name || !year || !passengers || !about || !img) {
     res.status(400);
     throw new Error("Please add all fields");
+  }
+
+  //See if rocket already exists
+  const rocketExists = await Rocket.findOne({ name });
+
+  if (rocketExists) {
+    res.status(400);
+    throw new Error("Rocket already exists!");
   }
 
   //Create rocket
@@ -34,13 +42,11 @@ const addRocket = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Get a Rocket's Data from the DB
-// @route   get /api/rockets/rocket
-// @access  Public
-
 // @desc    Delete a rocket from the DB
 // @route   DEL /api/rockets/rocket
 // @access  Public
+
+const deleteRocket = asyncHandler(async (req, res) => {});
 
 module.exports = {
   addRocket,

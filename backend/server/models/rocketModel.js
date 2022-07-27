@@ -10,6 +10,10 @@ const rocketSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add the year that the rocket launched"],
     },
+    img: {
+      type: String,
+      required: [true, "Please include an image src for the rocket"],
+    },
     passengers: {
       type: String,
       required: [true, "Please add the passengers, type none if none"],
