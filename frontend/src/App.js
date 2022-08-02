@@ -1,5 +1,6 @@
 import "./App.css";
 import Nav from "./components/nav/Nav";
+import AddRocket from "./containers/AddRocket/addRocket";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
     <div className="app">
       <Router>
         <Nav />
-        <Routes></Routes>
+        <Routes>
+          <Route path="add" element={<AddRocket />} />
+        </Routes>
       </Router>
     </div>
   );
