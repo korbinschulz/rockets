@@ -1,0 +1,41 @@
+.add-rocket {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+h2 {
+    color: #034488;
+    font-size: 30px;
+}
+
+.form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.form-group {
+    margin: 25px;
+}
+
+.form-header {
+    margin-bottom: 10px;
+    color: #034488;
+}
+
+.form-control-abt, .form-control {
+    font-family: 'Poppins','Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    width: 250px;
+}
+
+.form-control-abt {
+    height: 100px;
+}
