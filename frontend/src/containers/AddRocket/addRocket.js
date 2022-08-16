@@ -42,12 +42,17 @@ function AddRocket() {
       })
       .catch(function (error) {
         console.log(error);
+        alert(
+          "Error, please check that rocket doesn't already exist and then try again!"
+        );
       });
 
-    name = "";
-    year = "";
-    img = "";
-    about = "";
+    setFormData({
+      name: "",
+      year: "",
+      img: "",
+      about: "",
+    });
   };
 
   return (
