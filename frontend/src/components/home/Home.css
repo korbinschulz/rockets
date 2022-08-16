@@ -1,0 +1,10 @@
+
+.home {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #034488;
+    font-size: 20px;
+}

@@ -23,6 +23,11 @@
     font-size: 30px;
 }
 
+.nav-title h1 {
+    overflow: hidden;
+}
+
 .nav-menu {
     padding-right: 5px;
 }
+

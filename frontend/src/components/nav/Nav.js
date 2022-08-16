@@ -3,9 +3,22 @@ import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import MenuOptions from "./MenuOptions.js";
 
 function Nav() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+    console.log(showMenu);
+    if (showMenu) {
+      return (
+        <div className="menu">
+          <MenuOptions />
+        </div>
+      );
+    }
+  };
 
   return (
     <div className="nav">
@@ -13,7 +26,24 @@ function Nav() {
         <RocketLaunchIcon className="nav-logo" style={{ fontSize: 40 }} />{" "}
       </Link>
       <h1 className="nav-title">X Rockets</h1>
-      <MenuIcon className="nav-menu" style={{ fontSize: 40 }} />
+      <div className="nav-shell">
+        <MenuIcon
+          className="nav-menu"
+          style={{ fontSize: 40 }}
+          onClick={toggleMenu}
+        />
+        {
+          <div>
+            {showMenu ? (
+              <div className="menu-open">
+                <MenuOptions />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        }
+      </div>
     </div>
   );
 }

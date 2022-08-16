@@ -1,11 +1,9 @@
 import "./Home.css";
-import Rocket from "../rocket/Rocket";
 
 function Home() {
-  let thisYear = new Date().getFullYear();
   return (
     <div className="home">
-      <Rocket name="Korbin Schulz" year={thisYear} />
+      <h1>This is the home page</h1>
     </div>
   );
 }
