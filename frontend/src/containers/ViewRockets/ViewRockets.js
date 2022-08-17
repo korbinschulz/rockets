@@ -1,4 +1,5 @@
 import axios from "axios";
+import Rocket from "../../components/rocket/Rocket";
 import React, { useEffect, useState } from "react";
 import "./ViewRockets.css";
 
@@ -12,7 +13,7 @@ function ViewRockets() {
       .then(function (res) {
         console.log("Data has been fetched!");
         console.log(res);
-        setRockets(res);
+        setRockets(res.data);
         setIsLoading(false);
       })
       .catch(function (error) {
@@ -34,6 +35,19 @@ function ViewRockets() {
       <h2>
         The Rockets below are the ones currently existing in the database.
       </h2>
+      <div className="rockets">
+        {rockets.map((ship) => (
+          <div className="rocket" key={ship._id}>
+            <Rocket
+              name={ship.name}
+              year={ship.year}
+              img={ship.img}
+              about={ship.about}
+              id={ship._id}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

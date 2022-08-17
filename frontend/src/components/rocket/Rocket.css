@@ -1,0 +1,63 @@
+.rocket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px;
+}
+
+.rocket-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rocket-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rocket-body img {
+    height: 200px;
+    min-width: 230px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+.rocket-name {
+    margin: 5px;
+}
+
+.name-prop {
+    display: inline-block
+}
+
+.rocket-year {
+    margin: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.rocket-about {
+    margin-top: 15px;
+}
+
+.del-btn {
+    margin-top: 30px;
+    background-color: #034488;
+    color: #edece8;
+    font-weight: bold;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
