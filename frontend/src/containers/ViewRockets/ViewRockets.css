@@ -1,0 +1,14 @@
+.view-rockets {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    overflow: hidden;
+}
+
+h2 {
+    color: #034488;
+    font-size: 30px;
+}
