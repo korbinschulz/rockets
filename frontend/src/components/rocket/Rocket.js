@@ -1,13 +1,13 @@
 import "./Rocket.css";
 
-function Rocket({ name, year, img, video, imgsrc, about }) {
+function Rocket({ name, year, img, about }) {
   return (
     <div className="rocket">
       <div className="rocket-outer">
-        <a href={imgsrc}>
+        <a href={img}>
           <img src={img} />
         </a>
-        <small className="img-src">Image from {imgsrc}</small>
+        <small className="img-src">Image from {img}</small>
         <div className="rocket-info">
           <div className="rocket-name">
             <h2>{name}</h2>

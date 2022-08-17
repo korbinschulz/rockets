@@ -10,11 +10,10 @@ function Nav() {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    console.log(showMenu);
     if (showMenu) {
       return (
         <div className="menu">
-          <MenuOptions />
+          <MenuOptions showMenu={showMenu} setShowMenu={setShowMenu} />
         </div>
       );
     }

@@ -1,29 +1,34 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { navItems } from "./navItems";
 import "./MenuOptions.css";
 
-function MenuOptions() {
+function MenuOptions({ setShowMenu }) {
+  const handleClick = (e) => {
+    setShowMenu(false);
+  };
+
   return (
     <div className="menu">
       <ul className="menu-options">
         <li>
-          <NavLink to="/">
+          <NavLink className="option" to="/" onClick={(e) => handleClick(e)}>
             <p>Home</p>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/add">
-            <p>Add Rocket</p>
+          <NavLink className="option" to="/add" onClick={(e) => handleClick(e)}>
+            <p>Add Rockets</p>
           </NavLink>
         </li>
-        {navItems.map((item) => (
-          <li>
-            <NavLink key={item.text} to={item.path}>
-              <p>{item.text}</p>
-            </NavLink>
-          </li>
-        ))}
+        <li>
+          <NavLink
+            className="option"
+            to="/view"
+            onClick={(e) => handleClick(e)}
+          >
+            <p>View Rockets</p>
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
