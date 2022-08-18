@@ -2,10 +2,8 @@ import axios from "axios";
 import "./Rocket.css";
 
 function Rocket({ name, year, img, about, id }) {
-  const handleClick = (e) => {
-    e.preventDefault();
-
-    const delUrl = `http://localhost:3000/api/rockets/:${id}`;
+  const handleClick = () => {
+    const delUrl = `http://localhost:3000/api/rockets/${id}`;
 
     axios
       .delete(delUrl)
