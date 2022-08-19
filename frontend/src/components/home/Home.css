@@ -8,3 +8,25 @@
     color: #034488;
     font-size: 20px;
 }
+
+.body {
+    font-size: 20px;
+    margin-top: 7px;
+    font-weight: 500;
+    max-width: 80%;
+}
+
+.body-2 {
+    font-size: 17px;
+    margin-top: 3px;
+    font-weight: 500;
+    max-width: 80%;
+    padding-bottom: 10px;
+}
+
+.home-img img {
+    height: 400px;
+    min-width: 250px;
+    margin: 40px;
+    object-fit:contain;
+}

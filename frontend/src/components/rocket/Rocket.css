@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
 .rocket {
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 40px;
+    margin: 35px;
 }
 
 .rocket-header {
@@ -20,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    min-width: 200px;
 }
 
 .rocket-body img {
@@ -28,10 +32,7 @@
     min-width: 230px;
     margin-bottom: 20px;
     border: 2px solid black;
-}
-
-.rocket-name {
-    margin: 5px;
+    object-fit: cover;
 }
 
 .name-prop {
@@ -43,6 +44,18 @@
     margin-bottom: 15px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rocket-name {
+    width: 90%;
+    margin: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .rocket-about {
@@ -50,14 +63,66 @@
 }
 
 .del-btn {
-    margin-top: 30px;
+    margin: 5px;
     background-color: #034488;
     color: #edece8;
     font-weight: bold;
-    width: 120px;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.edit-btn {
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #034488;
+    color: #edece8;
+    font-weight: bold;
+    width: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
+
+.edit-btn:hover, .del-btn:hover {
+    background-color: #0559b3;}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-wrap: normal;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+textarea {
+    overflow: scroll;
+}
+
+input, textarea {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+    
+  }
