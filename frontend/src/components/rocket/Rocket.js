@@ -34,7 +34,7 @@ function Rocket({ name, year, img, about, id }) {
     setEditRocket(true);
   };
 
-  const onChange = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
     setRocketData((prevState) => ({
       ...prevState,
@@ -73,8 +73,8 @@ function Rocket({ name, year, img, about, id }) {
               type="text"
               className="form-control"
               name="name"
-              value={name}
-              onChange={onChange}
+              placeholder={name}
+              onChange={handleChange}
             />
           </div>
 
@@ -84,8 +84,8 @@ function Rocket({ name, year, img, about, id }) {
               type="text"
               className="form-control"
               year="year"
-              value={year}
-              onChange={onChange}
+              placeholder={year}
+              onChange={handleChange}
             />
           </div>
 
@@ -95,8 +95,8 @@ function Rocket({ name, year, img, about, id }) {
               type="url"
               className="form-control"
               img="img"
-              value={img}
-              onChange={onChange}
+              placeholder={img}
+              onChange={handleChange}
             />
           </div>
           <div className="form-group">
@@ -106,9 +106,9 @@ function Rocket({ name, year, img, about, id }) {
               columns="25"
               type="text"
               className="form-control-abt"
-              img="img"
-              value={about}
-              onChange={onChange}
+              about="about"
+              placeholder={about}
+              onChange={handleChange}
             />
           </div>
 
