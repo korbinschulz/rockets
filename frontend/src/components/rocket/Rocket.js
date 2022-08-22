@@ -43,6 +43,7 @@ function Rocket({ name, year, img, about, id }) {
       [e.target.img]: e.target.value,
       [e.target.about]: e.target.value,
     }));
+    console.log(rocketData);
   };
 
   const handleSubmit = (e) => {
@@ -54,7 +55,6 @@ function Rocket({ name, year, img, about, id }) {
       .put(putUrl, rocketData)
       .then(function (response) {
         console.log(response);
-        setEditRocket(false);
         alert("Rocket data has been updated!");
       })
       .catch(function (error) {
@@ -73,6 +73,7 @@ function Rocket({ name, year, img, about, id }) {
               type="text"
               className="form-control"
               name="name"
+              id="name"
               placeholder={name}
               onChange={handleChange}
             />
@@ -83,7 +84,8 @@ function Rocket({ name, year, img, about, id }) {
             <input
               type="text"
               className="form-control"
-              year="year"
+              name="year"
+              id="year"
               placeholder={year}
               onChange={handleChange}
             />
@@ -94,7 +96,8 @@ function Rocket({ name, year, img, about, id }) {
             <input
               type="url"
               className="form-control"
-              img="img"
+              name="img"
+              id="img"
               placeholder={img}
               onChange={handleChange}
             />
@@ -106,7 +109,8 @@ function Rocket({ name, year, img, about, id }) {
               columns="25"
               type="text"
               className="form-control-abt"
-              about="about"
+              name="about"
+              id="about"
               placeholder={about}
               onChange={handleChange}
             />
