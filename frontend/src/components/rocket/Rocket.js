@@ -55,7 +55,8 @@ function Rocket({ name, year, img, about, id }) {
       .put(putUrl, rocketData)
       .then(function (response) {
         console.log(response);
-        alert("Rocket data has been updated!");
+        setEditRocket(false);
+        //alert("Rocket data has been updated!");
       })
       .catch(function (error) {
         console.log(error);

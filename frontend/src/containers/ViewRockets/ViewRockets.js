@@ -20,7 +20,7 @@ function ViewRockets() {
         console.log(error);
         alert("Error fetching rockets from database, please try again!");
       });
-  }, []);
+  }, [rockets]);
 
   if (isLoading) {
     return (
