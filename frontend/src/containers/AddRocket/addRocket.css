@@ -33,8 +33,33 @@ h2 {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     width: 250px;
+    overflow: auto;
 }
 
 .form-control-abt {
     height: 100px;
+}
+
+button {
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #034488;
+    color: #edece8;
+    font-weight: bold;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 290px) {
+    .form-control {
+        max-width: 80%;
+    }
+
+    .form-control-abt {
+        max-width: 80%;
+    }
 }
